@@ -8,7 +8,6 @@ namespace ConsoleApp1
 {
     class Grandmother : People
     {
-        private bool flour;
         public Grandmother()
         {
             Name = "Старуха";

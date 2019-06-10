@@ -43,19 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Bear.cs" />
+    <Compile Include="Animals\Animal.cs" />
+    <Compile Include="Animals\Bear.cs" />
     <Compile Include="Bun.cs" />
-    <Compile Include="Fox.cs" />
-    <Compile Include="Grandfather.cs" />
-    <Compile Include="Grandmother.cs" />
-    <Compile Include="Hare.cs" />
+    <Compile Include="Animals\Fox.cs" />
+    <Compile Include="People\Grandfather.cs" />
+    <Compile Include="People\Grandmother.cs" />
+    <Compile Include="Animals\Hare.cs" />
     <Compile Include="IInventive.cs" />
     <Compile Include="Meet.cs" />
-    <Compile Include="People.cs" />
+    <Compile Include="People\People.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wolf.cs" />
+    <Compile Include="Animals\Wolf.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

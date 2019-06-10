@@ -10,7 +10,12 @@ namespace ConsoleApp1
     {
         private Bun bun;
         private Animal animal;
-        private int countMeeting;
+        private static int countMeet;
+
+        public static int CountMeet
+        {
+            get { return countMeet; }
+        } 
 
         public Meet(Bun bun,Animal animal)
         {
@@ -21,20 +26,12 @@ namespace ConsoleApp1
 
         public void MeetAnimal()
         {
-            Console.WriteLine("Катится колобок по дороге, а навстречу ему {0}", animal.Name);
+            Console.WriteLine("Катится колобок по дороге, а навстречу ему {0}:", animal.Name);
             animal.Speak();
-            if (animal is Hare)
-            {
-                Console.WriteLine("Не ешь меня, косой зайчик! Я тебе песенку спою");
-                bun.Sing();
-                Console.WriteLine("От тебя, зайца, не хитро уйти!");
-            }
-            else if (animal is Wolf)
-                Console.WriteLine("Не ешь меня, серый волк! Я тебе песенку спою!");
-            else if (animal is Bear)
-                Console.WriteLine("Где тебе, косолапому, съесть меня!");
-       //     else if (animal is Fox)
-
+            Console.WriteLine("Не ешь меня, {0}! Я тебе песенку спою:",animal.Name);
+            bun.Sing(countMeet);
+            Console.WriteLine("От тебя, {0}, не хитро уйти!", animal.Name);
+            countMeet++;
         }
 
     }

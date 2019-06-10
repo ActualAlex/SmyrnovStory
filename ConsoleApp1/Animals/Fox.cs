@@ -9,7 +9,6 @@ namespace ConsoleApp1
     class Fox : Animal, IInventive
     {
         private bool noseIsEmpty = true;
-        private bool mouthIsEmpty = true;
 
         public Fox()
         {
@@ -17,22 +16,20 @@ namespace ConsoleApp1
         }
         public void FindSolution()
         {
-            if (noseIsEmpty && mouthIsEmpty)
+            if (noseIsEmpty)
             {
                 Console.WriteLine("Какая славная песенка! — сказала лиса.");
                 Console.WriteLine("Но ведь я, колобок, стара стала, плохо слышу; сядь-ка на мой ноcик да пропой еще разок погромче");
+                Console.WriteLine("Колобок вскочил лисе на мордочку и запел ту же песню:");
                 noseIsEmpty = false;
             }
-            else if (!noseIsEmpty)
+            else 
             {
                 Console.WriteLine("Спасибо, колобок! Славная песенка, еще бы послушала! Сядь-ка на мой язычок да пропой в последний разок  — сказала лиса и высунула свой язык");
-                noseIsEmpty = true;
-                mouthIsEmpty = false;
-            }
-            else if (!mouthIsEmpty)
-            {
                 Console.WriteLine("Колобок прыг ей на язык, а лиса — ам его! и скушала");
+                noseIsEmpty = true;
             }
+
         }
 
         public override void Speak()

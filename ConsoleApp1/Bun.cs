@@ -27,9 +27,9 @@ namespace ConsoleApp1
             int x = 0;
             while (x < 50)
             {
-                for (int i = 0; i < 30; i++)
+                for (int i = 0; i < 50; i++)
                 {
-                    Thread.Sleep(50);
+                    Thread.Sleep(30);
                     Console.Write(".");
                 }
                 Console.WriteLine();
@@ -37,21 +37,7 @@ namespace ConsoleApp1
             }
         }
 
-     /*   public void MeetAnimal(Animal animal)
-        {
-            Console.WriteLine("Катится колобок по дороге, а навстречу ему {0}", animal.Name);
-            animal.Speak();
-            if (animal is Hare)
-                Console.WriteLine("Не ешь меня, косой зайчик! Я тебе песенку спою");
-            else if (animal is Wolf)
-                Console.WriteLine("Не ешь меня, серый волк! Я тебе песенку спою!");
-            else if (animal is Bear)
-                Console.WriteLine("Где тебе, косолапому, съесть меня!");
-
-
-        } */
-
-        public void Sing()
+        public void Sing(int countMeet)
         {
             Console.WriteLine("Я по коробу скребён");
             Console.WriteLine("По сусеку метён,");
@@ -60,7 +46,12 @@ namespace ConsoleApp1
             Console.WriteLine("На окошке стужон;");
             Console.WriteLine("Я от дедушки ушёл,");
             Console.WriteLine("Я от бабушки ушёл,");
-            Console.WriteLine("И от тебя уйду.");
+            if(countMeet > 0)
+                Console.WriteLine("Я от зайца ушел,");
+            if(countMeet > 1)
+                Console.WriteLine("Я от волка ушёл,");
+            if (countMeet > 2)
+                Console.WriteLine("От медведя ушёл,");
         }
     }
 }
