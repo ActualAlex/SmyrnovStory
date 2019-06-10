@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
@@ -20,7 +21,23 @@ namespace ConsoleApp1
             Console.WriteLine("Колобок полежал-полежал, да вдруг и покатился — с окна на лавку, с лавки на пол, по полу да к дверям, перепрыгнул через порог в сени, из сеней на крыльцо, с крыльца на двор, со двора за ворота, дальше и дальше.");
         }
 
-        public void MeetAnimal(Animal animal)
+        public void Run()
+        {
+            Random random = new Random();
+            int x = 0;
+            while (x < 50)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    Thread.Sleep(50);
+                    Console.Write(".");
+                }
+                Console.WriteLine();
+                x = random.Next(0, 100);
+            }
+        }
+
+     /*   public void MeetAnimal(Animal animal)
         {
             Console.WriteLine("Катится колобок по дороге, а навстречу ему {0}", animal.Name);
             animal.Speak();
@@ -32,7 +49,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Где тебе, косолапому, съесть меня!");
 
 
-        }
+        } */
 
         public void Sing()
         {

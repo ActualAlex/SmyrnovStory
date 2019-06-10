@@ -18,18 +18,22 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            int x = 0;
-            while (x < 40)
-            {
-                for (int i = 0; i < 20; i++)
-                {
-                    Thread.Sleep(50);
-                    Console.Write(".");
-                }
-                Console.WriteLine();
-                x = random.Next(0, 50);
-            }
+            Grandfather grandfather = new Grandfather();
+            Grandmother grandmother = new Grandmother();
+            Bun bun = new Bun();
+            Animal[] animals = { new Hare(), new Wolf(), new Bear(), new Fox()};
+            Meet meeting;
+
+            Console.WriteLine("Жил-был старик со старухою. Просит старик:");
+            grandfather.Speak();
+            grandmother.Speak();
+            grandfather.FindSolution();
+            grandmother.FindFlour();
+            grandmother.BakeBun();
+            bun.RunAway();
+            bun.Run();
+            meeting = new Meet(bun, animals[0]);
+            meeting.MeetAnimal();
         }
     }
 }

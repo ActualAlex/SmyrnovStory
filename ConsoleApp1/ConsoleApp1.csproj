@@ -51,6 +51,7 @@
     <Compile Include="Grandmother.cs" />
     <Compile Include="Hare.cs" />
     <Compile Include="IInventive.cs" />
+    <Compile Include="Meet.cs" />
     <Compile Include="People.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
